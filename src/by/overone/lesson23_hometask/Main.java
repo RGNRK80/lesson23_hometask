@@ -32,6 +32,9 @@ public class Main {
         Num<Integer> numInt3=numInt1.sum(numDou1);
         System.out.println("rezult:  " +  numInt3);
 
+        Num<Double> nd=new Num<>(Double.MAX_VALUE);
+        Num<Double> rez= nd.sum(numDou1);
+
 
     }
 }
