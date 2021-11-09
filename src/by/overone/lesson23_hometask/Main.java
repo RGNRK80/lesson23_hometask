@@ -30,7 +30,9 @@ public class Main {
         Num<Integer> numInt3=numInt1.sum(numDou1);
         System.out.println("rezult:  " +  numInt3);
 
-
+Double xx=Double.MAX_VALUE;
+var xxx=xx*10;
+        System.out.println(xxx);
 
 
     }

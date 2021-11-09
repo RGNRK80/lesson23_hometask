@@ -235,13 +235,13 @@ public class Num < T extends Number>{
         if ((unit instanceof Integer) && (rezult>Integer.MAX_VALUE || rezult<Integer.MIN_VALUE)) {
             throw new ArithmeticException("integer overflow");}
         if ((unit instanceof Float) && (rezult>Float.MAX_VALUE || rezult<Float.MIN_VALUE)) {
-            throw new ArithmeticException("integer overflow");}
+            throw new ArithmeticException("float overflow");}
         if ((unit instanceof Double) && (rezult>Double.MAX_VALUE || rezult<Double.MIN_VALUE)) {
-            throw new ArithmeticException("integer overflow");}
+            throw new ArithmeticException("Double overflow");}
         if ((unit instanceof Byte) && (rezult>Byte.MAX_VALUE || rezult<Byte.MIN_VALUE)) {
-            throw new ArithmeticException("integer overflow");}
+            throw new ArithmeticException("Byte overflow");}
         if ((unit instanceof Short) && (rezult>Short.MAX_VALUE || rezult<Short.MIN_VALUE)) {
-            throw new ArithmeticException("integer overflow");}
+            throw new ArithmeticException("Short overflow");}
 
     }
 
