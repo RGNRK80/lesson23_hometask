@@ -196,11 +196,11 @@ public class Num < T extends Number>{
 
     public Num<T> getCl (T unit, Double rezult) {
         if (val instanceof Integer) {Num<Integer> rint = new Num(rezult.intValue()); return (Num<T>) rint; }
-        if (val instanceof Long) {Num<Integer> rint = new Num(rezult.longValue());return (Num<T>) rint; }
-        if (val instanceof Short) {Num<Integer> rint = new Num(rezult.shortValue()); return (Num<T>) rint;}
-        if (val instanceof Byte) {Num<Integer> rint = new Num(rezult.byteValue());return (Num<T>) rint; }
-        if (val instanceof Float) {Num<Integer> rint = new Num(rezult.floatValue());return (Num<T>) rint; }
-        if (val instanceof Double) {Num<Integer> rint = new Num(rezult);return (Num<T>) rint;}
+        if (val instanceof Long) {Num<Long> rint = new Num(rezult.longValue());return (Num<T>) rint; }
+        if (val instanceof Short) {Num<Short> rint = new Num(rezult.shortValue()); return (Num<T>) rint;}
+        if (val instanceof Byte) {Num<Byte> rint = new Num(rezult.byteValue());return (Num<T>) rint; }
+        if (val instanceof Float) {Num<Float> rint = new Num(rezult.floatValue());return (Num<T>) rint; }
+        if (val instanceof Double) {Num<Double> rint = new Num(rezult);return (Num<T>) rint;}
 
         return null;
     }
