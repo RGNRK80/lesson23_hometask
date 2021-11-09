@@ -1,5 +1,7 @@
 package by.overone.lesson23_hometask;
 
+import java.math.BigDecimal;
+
 public class Main {
     public static void main(String[] args) {
         Num<Float> xNum=new Num(50.15);
@@ -29,10 +31,6 @@ public class Main {
 
         Num<Integer> numInt3=numInt1.sum(numDou1);
         System.out.println("rezult:  " +  numInt3);
-
-Double xx=Double.MAX_VALUE;
-var xxx=xx*10;
-        System.out.println(xxx);
 
 
     }

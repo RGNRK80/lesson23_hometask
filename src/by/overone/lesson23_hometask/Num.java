@@ -1,5 +1,7 @@
 package by.overone.lesson23_hometask;
 
+import java.math.BigDecimal;
+
 public class Num < T extends Number>{
 
     private T val;
@@ -15,6 +17,7 @@ public class Num < T extends Number>{
     }
 
     public double multiplikate (double x) {
+       // BigDecimal rezz=new BigDecimal(val.doubleValue() * x);
         var rezult=val.doubleValue() * x;
         if (rezult>Double.MAX_VALUE || rezult<Double.MIN_VALUE) {throw new ArithmeticException("double overflow");}
         return (double) rezult;
@@ -205,6 +208,18 @@ public class Num < T extends Number>{
 
 
     public Num<T> sum(Num x1) {
+
+
+        BigDecimal val1=new BigDecimal(val.doubleValue());
+        BigDecimal val2=new BigDecimal(x1.val.doubleValue());
+        BigDecimal val3=val1.add(val2);
+        BigDecimal valCh1=new BigDecimal(Double.MAX_VALUE);
+        BigDecimal valCh2=new BigDecimal(Double.MIN_VALUE);
+        if (val3.compareTo(valCh1)>0 || val3.compareTo(valCh2)<0) {
+            throw new ArithmeticException("Double overflow");}
+
+
+
         Double rez = val.doubleValue() + x1.val.doubleValue();
         checkToOverflow(val, rez);
         Num<T> r = getCl(val, rez);
@@ -212,18 +227,51 @@ public class Num < T extends Number>{
     }
 
     public Num<T> mult (Num x1) {
+
+
+        BigDecimal val1=new BigDecimal(val.doubleValue());
+        BigDecimal val2=new BigDecimal(x1.val.doubleValue());
+        BigDecimal val3=val1.multiply(val2);
+        BigDecimal valCh1=new BigDecimal(Double.MAX_VALUE);
+        BigDecimal valCh2=new BigDecimal(Double.MIN_VALUE);
+        if (val3.compareTo(valCh1)>0 || val3.compareTo(valCh2)<0) {
+            throw new ArithmeticException("Double overflow");}
+
+
         Double rez = val.doubleValue() * x1.val.doubleValue();
         checkToOverflow(val, rez);
         Num<T> r = getCl(val, rez);
         return r;
     }
     public Num<T> divis (Num x1) {
+
+        BigDecimal val1=new BigDecimal(val.doubleValue());
+        BigDecimal val2=new BigDecimal(x1.val.doubleValue());
+        BigDecimal val3=val1.divide(val2);
+        BigDecimal valCh1=new BigDecimal(Double.MAX_VALUE);
+        BigDecimal valCh2=new BigDecimal(Double.MIN_VALUE);
+        if (val3.compareTo(valCh1)>0 || val3.compareTo(valCh2)<0) {
+            throw new ArithmeticException("Double overflow");}
+
+
+
         Double rez = val.doubleValue() / x1.val.doubleValue();
         checkToOverflow(val, rez);
         Num<T> r = getCl(val, rez);
         return r;
     }
     public Num<T> substr (Num x1) {
+
+        BigDecimal val1=new BigDecimal(val.doubleValue());
+        BigDecimal val2=new BigDecimal(x1.val.doubleValue());
+        BigDecimal val3=val1.subtract(val2);
+        BigDecimal valCh1=new BigDecimal(Double.MAX_VALUE);
+        BigDecimal valCh2=new BigDecimal(Double.MIN_VALUE);
+
+
+        if (val3.compareTo(valCh1)>0 || val3.compareTo(valCh2)<0) {
+            throw new ArithmeticException("Double overflow");}
+
         Double rez = val.doubleValue() - x1.val.doubleValue();
         checkToOverflow(val, rez);
         Num<T> r = getCl(val, rez);
