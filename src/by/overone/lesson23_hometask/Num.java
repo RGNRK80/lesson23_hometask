@@ -17,7 +17,6 @@ public class Num < T extends Number>{
     }
 
     public double multiplikate (double x) {
-       // BigDecimal rezz=new BigDecimal(val.doubleValue() * x);
         var rezult=val.doubleValue() * x;
         if (rezult>Double.MAX_VALUE || rezult<Double.MIN_VALUE) {throw new ArithmeticException("double overflow");}
         return (double) rezult;
